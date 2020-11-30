@@ -36,13 +36,13 @@ func getFuelByMassDeep(mass int) int {
 	initialFuel := getFuelByMass(mass)
 	newFuel := initialFuel
 
-    totalModuleFuel += initialFuel
+	totalModuleFuel += initialFuel
 
 	for 0 < newFuel {
 		newFuel = getFuelByMass(newFuel)
-        if newFuel < 0 {
-            newFuel = 0
-        }
+		if newFuel < 0 {
+			newFuel = 0
+		}
 		totalModuleFuel += newFuel
 	}
 
